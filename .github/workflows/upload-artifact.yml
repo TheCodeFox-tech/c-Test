@@ -14,13 +14,15 @@ jobs:
       id: time
       run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
     - name: compile
-      run: gcc Main.c -o build-${{ steps.date.outputs.date }}.out
+      run: gcc Main.c -o build-$RELEASE.out
+      env: RELEASE:${{ steps.date.outputs.date }}
     - name: Commit files
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add build-${{ steps.date.outputs.date }}.out
+        git add build-$RELEASE.out -f
         git commit -m "Add artifact" -a
+      env: RELEASE:${{ steps.date.outputs.date }}
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
