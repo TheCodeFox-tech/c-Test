@@ -1,4 +1,4 @@
 
 #include <stdio.h>
 
-printf("%d", 5)
+printf('%d', 5)
