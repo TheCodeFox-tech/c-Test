@@ -1,11 +1,8 @@
+
 #include <stdio.h>
-#include <stdlib.h>
 
 int main() {
-   char desc;
+   printf("Hello World!")
 
-   desc = malloc(250);
-
-   free(desc);
    return 0;
 }
