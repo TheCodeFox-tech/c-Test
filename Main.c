@@ -1,4 +1,5 @@
 
 #include <stdio.h>
-
-printf('%d', 5)
+int main() {
+    printf('%d', 5)
+}
