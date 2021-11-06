@@ -5,6 +5,6 @@ int main() {
     
     int *ptr = &testInteger;
 
-    printf("Adress (maybe): %d\n", ptr);
-    printf("Value: %x\n", *ptr);
+    printf("Adress: %d\n", ptr);
+    printf("Value: %d\n", *ptr);
 }
