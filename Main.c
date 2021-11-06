@@ -1,5 +1,6 @@
 
 #include <stdio.h>
 int main() {
-    printf("%d", 5);
+    int testInteger = 5;
+    printf("%d", testInteger);
 }
